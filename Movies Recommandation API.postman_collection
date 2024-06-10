@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "f605b5fe-bfe0-4e82-ad97-23418e434e82",
+		"name": "Movies Recommandation",
+		"description": "Api's for Collaborative Movie Recommandation System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36195995"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ujjwal",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "zxcv9876",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "zxcv9876",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "XYZ Title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "XYZ Description",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2024-06-14",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "ABC Title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "ABC Description",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2024-06-14",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies/5001/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"5001",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies/59/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"59",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reviews",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "rating",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "XYZ comment",
+							"type": "text"
+						},
+						{
+							"key": "movie",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "rating",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Updated comment",
+							"type": "text"
+						},
+						{
+							"key": "movie",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4NTI0Nzk2LCJpYXQiOjE3MTc5MTk5OTYsImp0aSI6ImU5NWE5YjdkMjFjZTRlOTk4NmUxOGQzZjQyMTU3N2M3IiwidXNlcl9pZCI6MX0.v__qZv1kstjWwJ9wpghnaTaA4YIxdksb8iVb2P2dqGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies/452/recommendations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"452",
+						"recommendations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
